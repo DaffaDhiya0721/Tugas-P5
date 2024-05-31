@@ -31,11 +31,31 @@
                             @php $no = 1; @endphp
                         @foreach ($destinasi as $item)
                         <tr>
-                            <td>{{$no++}}</td>
-                            <td>{{$item->nama_tempat}}</td>
-                            <td>{{$item->id_tiket}}</td>
-                            <td>{{$item->deskripsi}}</td>
-                            
+                        <td>{{$no++}}</td>
+                        <td>{{$item->nama_tempat}}</td>
+                        <td>{{$item->id_tiket}}</td>
+                        <td>{{$item->deskripsi}}</td>
+                        <td><img src="{{asset('/images/destinasi/'.$item->cover)}}"
+                            style="width: 300px;" alt="">
+                        </td>
+                        <td>{{$item->kategori->nama_kategori}}</td>
+                        <td>{{$item->lokasi->nama_lokasi}}</td>
+                        <td>
+                            <form action="{{route('destinasi.destroy',$item->id)}}" method="post">
+                                @method('DELETE')
+                                @csrf
+                                <a href="{{route('destinasi.edit',$item->id)}}" class="btn btn-sm btn-success">
+                                    Edit
+                                </a>
+                                <a href="{{route('destinasi.show',$item->id)}}" class="btn btn-sm btn-warning">
+                                    Show
+                                </a>
+                                <button class="btn btn-sm btn-danger" type="submit"
+                                    onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
+                                    Delete
+                                </button>
+                            </form>
+                        </td>
                         </tr>
                         @endforeach
                         </body>
