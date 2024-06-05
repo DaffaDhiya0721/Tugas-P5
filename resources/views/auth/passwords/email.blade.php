@@ -8,7 +8,7 @@
             <div class="card card-login card-white">
                 <div class="card-header">
                     <img src="{{ asset('black') }}/img/card-primary.png" alt="">
-                    <h1 class="card-title">{{ __('Reset password') }}</h1>
+                    <h1 class="card-title">{{ __('Reset Sandi') }}</h1>
                 </div>
                 <div class="card-body">
                     @include('alerts.success')
@@ -24,7 +24,7 @@
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" class="btn btn-primary btn-lg btn-block mb-3">{{ __('Send Password Reset Link') }}</button>
+                    <button type="submit" class="btn btn-primary btn-lg btn-block mb-3">{{ __('Kirim Tautan Reset Kata Sandi') }}</button>
                 </div>
             </div>
         </form>

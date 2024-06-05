@@ -1,4 +1,4 @@
-@extends('layouts.app', ['class' => 'login-page', 'page' => __('Login Page'), 'contentClass' => 'login-page'])
+@extends('layouts.app', ['class' => 'login-page', 'page' => __('Halaman Log in'), ])
 
 @section('content')
     <div class="col-md-10 text-center ml-auto mr-auto">
@@ -24,20 +24,20 @@
                                 <i class="tim-icons icon-lock-circle"></i>
                             </div>
                         </div>
-                        <input type="password" placeholder="{{ __('Password') }}" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}">
+                        <input type="password" placeholder="{{ __('Sandi') }}" name="password" class="form-control{{ $errors->has('password') ? ' is-invalid' : '' }}">
                         @include('alerts.feedback', ['field' => 'password'])
                     </div>
                 </div>
                 <div class="card-footer">
-                    <button type="submit" href="" class="btn btn-primary btn-lg btn-block mb-3">{{ __('Get Started') }}</button>
+                    <button type="submit" href="" class="btn btn-primary btn-lg btn-block mb-3">{{ __('Kirim') }}</button>
                     <div class="pull-left">
                         <h6>
-                            <a href="{{ route('register') }}" class="link footer-link">{{ __('Create Account') }}</a>
+                            <a href="{{ route('register') }}" class="link footer-link">{{ __('Buat Akun') }}</a>
                         </h6>
                     </div>
                     <div class="pull-right">
                         <h6>
-                            <a href="{{ route('password.request') }}" class="link footer-link">{{ __('Forgot password?') }}</a>
+                            <a href="{{ route('password.request') }}" class="link footer-link">{{ __('Lupa Sandi?') }}</a>
                         </h6>
                     </div>
                 </div>

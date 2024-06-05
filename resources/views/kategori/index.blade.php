@@ -33,11 +33,11 @@
                                 <form action="{{route('kategori.destroy',$item->id)}}" method="post">
                                 @method('DELETE')
                                 @csrf
-                                <a href="{{route('kategori.edit', $item->id)}}" class="btn btn-sm btn-success">Edit</a>
-                                <a href="{{route('kategori.show', $item->id)}}" class="btn btn-sm btn-warning">Show</a>
+                                <a href="{{route('kategori.edit', $item->id)}}" class="btn btn-sm btn-success">Ubah</a>
+                                <a href="{{route('kategori.show', $item->id)}}" class="btn btn-sm btn-warning">Lihat</a>
                                 
                                 <button class="btn btn-sm btn-danger" type="submit"
-                                    onclick="return confirm('Apakah Anda Yakin ingin menghapus data ini?')">Delete
+                                    onclick="return confirm('Apakah Anda Yakin ingin menghapus data ini?')">Hapus
                                 </button>
                                 </form>
                             </td>

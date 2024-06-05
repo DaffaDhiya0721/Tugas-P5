@@ -60,7 +60,7 @@
                             <select name="id_kategori" class="form-control @error('id_kategori') is-invalid @enderror">
                                 <option value="">Pilih Kategori</option>
                                 @foreach ($kategori as $data)
-                                <option value="{{$data->id}}">{{$data->nama_kategori}}</option>
+                                <option class="text-dark" value="{{$data->id}}">{{$data->nama_kategori}}</option>
                                 @endforeach
                             </select>
                             @error('kategori')
@@ -74,7 +74,7 @@
                             <select name="id_lokasi" class="form-control @error('id_lokasi') is-invalid @enderror">
                                 <option value="">Pilih Lokasi</option>
                                 @foreach ($lokasi as $data)
-                                <option value="{{$data->id}}">{{$data->nama_lokasi}}</option>
+                                <option class="text-dark" value="{{$data->id}}">{{$data->nama_lokasi}}</option>
                                 @endforeach
                             </select>
                             @error('lokasi')

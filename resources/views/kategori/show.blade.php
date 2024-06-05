@@ -8,7 +8,10 @@
                     <a href="{{route('kategori.index')}}" class="btn btn-sm btn-primary" style="float: right">Kembali</a>
                     </div>
                 <div class="card-body">
-                    <p>Nama Kategori: {{ $kategori->nama_kategori }}</p>
+                    <div class="mb-2 text-white">
+                        <label for="">Nama Kategori :</label>
+                        <b>{{$kategori->nama_kategori}}</b>
+                    </div>
             </div>
         </div>
     </div>

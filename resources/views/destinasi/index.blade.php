@@ -36,7 +36,7 @@
                         <td>{{$item->id_tiket}}</td>
                         <td>{{$item->deskripsi}}</td>
                         <td><img src="{{asset('/images/destinasi/'.$item->cover)}}"
-                            style="width: 300px;" alt="">
+                            style="width: 2000px;" alt="">
                         </td>
                         <td>{{$item->kategori->nama_kategori}}</td>
                         <td>{{$item->lokasi->nama_lokasi}}</td>
@@ -44,15 +44,15 @@
                             <form action="{{route('destinasi.destroy',$item->id)}}" method="post">
                                 @method('DELETE')
                                 @csrf
-                                <a href="{{route('destinasi.edit',$item->id)}}" class="btn btn-sm btn-success">
-                                    Edit
+                                <a href="{{route('destinasi.edit',$item->id)}}" class="btn btn-sm btn-success mb-2">
+                                    Ubah
                                 </a>
-                                <a href="{{route('destinasi.show',$item->id)}}" class="btn btn-sm btn-warning">
-                                    Show
+                                <a href="{{route('destinasi.show',$item->id)}}" class="btn btn-sm btn-warning mb-2">
+                                    Lihat
                                 </a>
-                                <button class="btn btn-sm btn-danger" type="submit"
+                                <button class="btn btn-sm btn-danger mb-2" type="submit"
                                     onclick="return confirm('Apakah Anda yakin ingin menghapus data ini?')">
-                                    Delete
+                                    Hapus
                                 </button>
                             </form>
                         </td>
