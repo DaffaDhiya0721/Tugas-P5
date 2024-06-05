@@ -137,7 +137,7 @@
     {{-- Destinasi --}}
     <section id="wisata" class="wisata">
         <div class="container">
-        <div class="row justify-content-center p-4">
+        <div class="row p-4">
           <div class="section-title">
             <h2>Beberapa Wisata</h2>
           </div>
